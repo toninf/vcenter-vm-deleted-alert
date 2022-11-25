@@ -7,10 +7,11 @@ MAIL_SEND_TO = ['your-email@example.com']
 VCENTER_DB_PASSWORD = 'vcenter-db-password'
 MAILSERVER_IP = 'mail-server-IP'
 TIME_STAMP_FILE = 'lastrun-timestamp.txt'
+ORGANIZATION_DOMAIN = '@org.com'
 
 
 def send_mail_error_mail(e):
-    from_mail_address = socket.getfqdn().split('.')[0] + '@yourdomain.com'
+    from_mail_address = socket.getfqdn().split('.')[0] + ORGANIZATION_DOMAIN
 
     msj = 'Subject: Execution error on VM alert \n\n' \
           'Vcenter: ' + socket.getfqdn() + '\n' \
@@ -27,7 +28,7 @@ def send_deleted_vm_alert(data):
         #get data from row
         vm_name = data[1]
         username = data[2]
-        from_mail_address = socket.getfqdn().split('.')[0] + '@yourdomain.com'
+        from_mail_address = socket.getfqdn().split('.')[0] + ORGANIZATION_DOMAIN
         start_time = '{0:%Y-%m-%d %H:%M:%S}'.format(data[3])
 
 
