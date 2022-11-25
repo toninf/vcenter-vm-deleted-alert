@@ -1,5 +1,5 @@
-### VCENTER VM DELETED ALERT
-# VMware vcenter vsphere >6.5 - Virtual Machine deleted alert
+# vCenter deleted VM alert
+#### VMware vcenter vsphere >6.5 - Virtual Machine deleted alert
 
 Vmware vCenter in its different versions does not allow the option to send alerts due to the deletion of virtual machines(VM).
 
